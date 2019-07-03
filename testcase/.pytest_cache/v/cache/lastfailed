@@ -1,0 +1,21 @@
+{
+  "cloud/order/testCloud.py::OrderCase::test_orderfc_1": true,
+  "cloud/order/testCloud.py::QueryOrder::test_orderfc_1": true,
+  "testAPI.py::Demo_API::test_api_01": true,
+  "testAPI.py::Demo_API::test_api_02": true,
+  "testAPI.py::Demo_API::test_api_03": true,
+  "testAPI.py::Demo_API::test_api_04": true,
+  "testAPI.py::Demo_API::test_api_05": true,
+  "testAPI.py::Demo_API::test_api_06": true,
+  "testAPI.py::Demo_API::test_api_07": true,
+  "testAPI.py::Demo_API::test_api_08": true,
+  "testAPI.py::Demo_API::test_api_09": true,
+  "testAPI.py::Demo_API::test_api_1": true,
+  "testAPI.py::Demo_API::test_api_10": true,
+  "testAPI.py::Demo_API::test_api_11": true,
+  "testAPI.py::Demo_API::test_api_12": true,
+  "testAPI.py::Demo_API::test_api_13": true,
+  "testAPI.py::Demo_API::test_api_14": true,
+  "testAPI.py::Demo_API::test_api_15": true,
+  "testCloud.py::OrderCase::test_orderfc": true
+}
