@@ -1,0 +1,5 @@
+[
+  "cloud/order/test_orderAPI.py::QueryOrder::test_queryorder_1",
+  "cloud/order/test_orderAPI.py::QueryOrder::test_queryorder_2",
+  "cloud/order/test_orderAPI.py::QueryOrder::test_queryorder_3"
+]

@@ -1,5 +1,0 @@
-[
-  "cloud/order/testCloud.py::QueryOrder::test_queryorder_1",
-  "cloud/order/testCloud.py::QueryOrder::test_queryorder_2",
-  "cloud/order/testCloud.py::QueryOrder::test_queryorder_3"
-]

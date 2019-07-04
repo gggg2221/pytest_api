@@ -1,4 +1,5 @@
 {
+  "cloud/order/orderAPI.py": true,
   "cloud/order/testCloud.py::OrderCase::test_orderfc_1": true,
   "cloud/order/testCloud.py::QueryOrder::test_orderfc_1": true,
   "testAPI.py::Demo_API::test_api_01": true,

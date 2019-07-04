@@ -12,15 +12,6 @@ future_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time() + 10
 
 # 创建测试数据
 datas = {
-    # 发布会表数据
-    # 'sign_event':[
-    #     {'id':1,'name':'红米Pro发布会','`limit`':2000,'status':1,'address':'北京会展中心','start_time':future_time},
-    # ]
-
-    # #　嘉宾表数据
-    # 'sign_guest':[
-    #     {'id':1,'realname':'Tom','phone':13511886601,'email':'alen@mail.com','sign':0,'event_id':1},
-    # ]
 
     # 订单测试数据
     'cloud_order_copy': [
@@ -29,7 +20,14 @@ datas = {
     ]
 }
 
+# 要清楚数据的表名
+table_name="cloud_order_copy"
+
 
 # 测试数据插入表
 def init_data():
-    DB().init_data(datas)
+    DB.init_data(datas)
+
+# 清除测试数据
+def clear_data():
+    DB.clear(table_name)
