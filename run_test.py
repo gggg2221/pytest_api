@@ -12,7 +12,7 @@ from package.HTMLTestRunner import HTMLTestRunner
 
 def add_case(test_path=setting.TEST_CASE):
     """加载所有的测试用例"""
-    discover = unittest.defaultTestLoader.discover(test_path, pattern='*API.py')
+    discover = unittest.defaultTestLoader.discover(test_path, pattern='*Api.py')
     return discover
 
 def run_case(all_case,result_path=setting.TEST_REPORT):
