@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-import os, sys, json, requests
+import os, sys, json
 from common import condata as c
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -45,11 +45,10 @@ class SendRequests():
             print(e)
 
     # 自定义post方法
-    def postRequests(self, s, jsonData):
+    def postRequests(self, s, jsonData, sign):
 
-        # 发送请求
-        re = s.post(url=c.SIGN_URL, data=json.dumps(jsonData).encode('utf-8'), headers={'content-type': 'application/json'})
-        print("请求地址：" + c.SIGN_URL)
-        print("请求参数：" + jsonData)
+        # 发送表单请求
+        re = s.post(url=c.SIGN_URL, data={'key': json.dumps(jsonData), 'sign': sign},
+                    headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
 
         return re
