@@ -48,8 +48,8 @@ class SendRequests():
     def postRequests(self, s, jsonData):
 
         # 发送请求
-        re = s.request(method="post", url=c.SIGN_URL, headers={"Content-Type": "application/json"}, data=jsonData)
-        print("请求地址："+c.SIGN_URL)
-        print("请求参数："+jsonData)
+        re = s.post(url=c.SIGN_URL, data=json.dumps(jsonData).encode('utf-8'), headers={'content-type': 'application/json'})
+        print("请求地址：" + c.SIGN_URL)
+        print("请求参数：" + jsonData)
 
         return re
