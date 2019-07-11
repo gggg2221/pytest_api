@@ -18,5 +18,6 @@
   "testAPI.py::Demo_API::test_api_13": true,
   "testAPI.py::Demo_API::test_api_14": true,
   "testAPI.py::Demo_API::test_api_15": true,
-  "testCloud.py::OrderCase::test_orderfc": true
+  "testCloud.py::OrderCase::test_orderfc": true,
+  "test_dkorderApi.py::DkOrder::test_jsdk": true
 }

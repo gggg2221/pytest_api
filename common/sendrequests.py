@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-import os,sys,json
+import os, sys, json, requests
+from common import condata as c
+
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 
 class SendRequests():
     """发送请求数据"""
-    def sendRequests(self,s,apiData):
+
+    # 通用请求
+    def sendRequests(self, s, apiData):
         try:
-            #从读取的表格中获取响应的参数作为传递
+            # 从读取的表格中获取响应的参数作为传递
             method = apiData["method"]
             url = apiData["url"]
             if apiData["params"] == "":
@@ -33,9 +37,19 @@ class SendRequests():
             else:
                 body = body_data
 
-            #发送请求
-            re = s.request(method=method,url=url,headers=h,params=par,data=body,verify=v)
+            # 发送请求
+            re = s.request(method=method, url=url, headers=h, params=par, data=body, verify=v)
 
             return re
         except Exception as e:
             print(e)
+
+    # 自定义post方法
+    def postRequests(self, s, jsonData):
+
+        # 发送请求
+        re = s.request(method="post", url=c.SIGN_URL, headers={"Content-Type": "application/json"}, data=jsonData)
+        print("请求地址："+c.SIGN_URL)
+        print("请求参数："+jsonData)
+
+        return re
