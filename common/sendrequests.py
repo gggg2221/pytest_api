@@ -48,7 +48,7 @@ class SendRequests():
     def postRequests(self, s, jsonData, sign):
 
         # 发送表单请求
-        re = s.post(url=c.SIGN_URL, data={'key': json.dumps(jsonData), 'sign': sign},
+        re = s.post(url=c.SIGN_URL, data={'key': json.dumps(jsonData,ensure_ascii=False), 'sign': sign},
                     headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
 
         return re

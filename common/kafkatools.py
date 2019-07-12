@@ -7,7 +7,7 @@ from kafka.errors import KafkaError
 from common import publicdef as p
 
 producer = KafkaProducer(bootstrap_servers='10.10.203.201:9092,10.10.203.202:9092,10.10.203.203:9092',
-                         value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+                         value_serializer=lambda v: json.dumps(v,ensure_ascii=False).encode('utf-8'))
 
 
 class kafkatools:
