@@ -45,10 +45,10 @@ class SendRequests():
             print(e)
 
     # 自定义post方法
-    def postRequests(self, s, jsonData, sign):
+    def postRequests(self, s, urls, jsonData, sign):
 
         # 发送表单请求
-        re = s.post(url=c.SIGN_URL, data={'key': json.dumps(jsonData,ensure_ascii=False), 'sign': sign},
+        re = s.post(url=urls, data={'key': json.dumps(jsonData, ensure_ascii=False), 'sign': sign},
                     headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
 
         return re
