@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
-import unittest,requests,time,json
+import unittest,requests,time
 from common import kafkatools as k
 from common import condata as c
 from common.sendrequests import SendRequests as r
 from common import publicdef
+from db_fixture import mysql_db as m
 
 
 class DkOrder(unittest.TestCase):
@@ -25,8 +26,11 @@ class DkOrder(unittest.TestCase):
         # 等待验签完成
         time.sleep(2)
         k.kafkatools.send_out(c.DkTopic,c.js_outjson)
-
-        self.assertEqual(True, False)
+        time.sleep(10)
+        sql1 = "SELECT ORDER_NO from cs_biz_order where CAR_NO='藏-JK1111' and PAY_TYPE='WX' and status=0 ORDER BY CREATE_TIME DESC;"
+        order=m.DB().select(sql1)
+        # print(order)
+        self.assertTrue(order!="","捷顺代扣成")
 
 
 if __name__ == '__main__':
