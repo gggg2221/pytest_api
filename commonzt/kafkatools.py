@@ -8,6 +8,9 @@ from kafka.errors import KafkaError
 producer = KafkaProducer(bootstrap_servers='10.10.203.201:9092,10.10.203.202:9092,10.10.203.203:9092',
                          value_serializer=lambda v: json.dumps(v,ensure_ascii=False).encode('utf-8'))
 
+topic=['dc.dk.park.out','dc.sign.park.in']
+
+wxsign='{"total":1,"business_no":"20181213002","dataItems":[{"attributes":{"carno":"藏-ZZ1111"}}],"park_code":"20181213001"}'
 
 class kafkatools:
     # 发送出场代扣数据
@@ -21,5 +24,6 @@ class kafkatools:
             producer.close()
             print('done')
 
-# if __name__ == '__main__':
-#     kafkatools.send_out(dk_topic, js_outjson)
+if __name__ == '__main__':
+    # kafkatools.send_out(dk_topic, js_outjson)
+    pass

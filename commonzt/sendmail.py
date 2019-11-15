@@ -6,7 +6,7 @@ import os,sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from config import setting
 import smtplib
-from common.newReport import new_report
+from commonzt.newReport import new_report
 import configparser
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart

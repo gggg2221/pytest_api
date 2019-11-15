@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import unittest,requests,time
-from common import kafkatools as k
-from common import condata as c
-from common.sendrequests import SendRequests as r
-from common import publicdef
+from commonzt import kafkatools as k
+from commonzt import condata as c
+from commonzt.sendrequests import SendRequests as r
+from commonzt import publicdef as p
 from db_fixture import mysql_db as m
 
 
@@ -18,8 +18,7 @@ class DkOrder(unittest.TestCase):
 
     #捷顺代扣
     def test_jsdk(self):
-        p=publicdef.publicdef()
-        sign=p.setMd5(c.js_signjson)
+        sign=p.publicdef.setMd5(c.js_signjson)
         # print(sign)
         #发送入场验签数据
         r().postRequests(self.s,c.SIGN_URL,c.js_signjson,sign)

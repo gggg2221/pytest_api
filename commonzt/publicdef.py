@@ -2,8 +2,7 @@
 
 import time, hashlib,json
 import random as r
-from common import condata as c
-
+from commonzt import condata as c
 
 class publicdef:
 
@@ -26,7 +25,7 @@ class publicdef:
 
     #验签反查MD5加密
     def setMd5(self,jsons):
-        js_signjson = {"serviceId": "fc.park.signatoryResult.OrderQuery","data": {"parkCode": "20181213001", "dataItems": [{"carNo": "藏-JK1111", "inTime": "2019-7-16 10:07:08","vehicleInfo": "{\"plateColor\":\"BLUE\"}"}]}}
+        # js_signjson = {"serviceId": "fc.park.signatoryResult.OrderQuery","data": {"parkCode": "20181213001", "dataItems": [{"carNo": "藏-JK1111", "inTime": "2019-7-16 10:07:08","vehicleInfo": "{\"plateColor\":\"BLUE\"}"}]}}
         # 字典类型dict转json并去掉内部中文转码
         j=json.dumps(jsons, ensure_ascii=False)
         sign = j+ c.parksig

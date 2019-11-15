@@ -3,7 +3,6 @@ import time
 import random
 import json
 from redis import StrictRedis
-
 re = StrictRedis(host='10.10.203.12', port=6379, password='Jht123456')
 
 a1=(2018,1,1,0,0,0,0,0,0)       #设置开始日期时间元组（2018-01-01 00：00：00）

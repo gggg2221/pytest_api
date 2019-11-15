@@ -13,8 +13,6 @@ import random
 import requests
 import Common.Consts
 from Common import Session
-from requests_toolbelt import MultipartEncoder
-
 
 class Request:
 
