@@ -5,7 +5,7 @@ from commonzt import condata as c
 from commonzt import publicdef as p
 from commonzt import sendrequests as s
 
-class OldSign(unittest.TestCase):
+class ZfbOldSign(unittest.TestCase):
 
     def setUp(self):
         self.s = requests.session()
@@ -13,12 +13,10 @@ class OldSign(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_WxIsv(self):
+    def test_ZfboIsv(self):
 
         #生成签名数据
-        json1 = json.dumps(str(c.wx_signojson)+c.parksig)
-
-        sign=p.publicdef().setMd5(json1)
+        sign=p.publicdef().setMd5(c.zfb_signojson)
         # print(sign)
 
         #发送验签请求

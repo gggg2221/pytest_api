@@ -1,0 +1,4 @@
+{
+  "test_ZfbApi.py::NewSign::test_WxIsv": true,
+  "test_ZfbApi.py::NewSign::test_ZfbIsv": true
+}
