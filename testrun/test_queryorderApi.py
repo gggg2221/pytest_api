@@ -6,11 +6,11 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest, requests, ddt
 from config import setting
-from common.readexcel import ReadExcel
-from common.sendrequests import SendRequests as r
-from common.writeexcel import WriteExcel
+from comzt.readexcel import ReadExcel
+from comzt.sendrequests import SendRequests as r
+from comzt.writeexcel import WriteExcel
 
-testData = ReadExcel(setting.SOURCE_FILE, "queryorder").read_data()
+testData = ReadExcel(setting.SOURCE_FILE, "signnew").read_data()
 
 
 @ddt.ddt
@@ -32,7 +32,7 @@ class QueryOrder(unittest.TestCase):
         print("请求参数: {0}".format(data['params']))
         print("post请求body类型为：{0} ,body内容为：{1}".format(data['type'], data['body']))
         # 发送请求
-        re = r().sendRequests(self.s, data)
+        re = r.sendrequests(self.s, data)
         # 获取服务端返回的值
         self.result = re.json()
         print("页面返回信息：%s" % re.content.decode("utf-8"))

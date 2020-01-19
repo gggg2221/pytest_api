@@ -5,8 +5,8 @@ import os,sys
 sys.path.append(os.path.dirname(__file__))
 from config import setting
 import unittest,time
-from commonzt.sendmail import send_mail
-from commonzt.newReport import new_report
+from comzt.sendmail import send_mail
+from comzt.newReport import new_report
 from db_fixture import test_data
 from package.HTMLTestRunner import HTMLTestRunner
 

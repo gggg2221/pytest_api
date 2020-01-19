@@ -3,7 +3,6 @@
 
 import os, sys, json
 import requests
-# import common.Contes
 # from common import Session
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -117,29 +116,29 @@ class SendRequests():
         return response_dicts
 
     # 通用请求
-    def sendRequests(self, s, apiData):
+    def sendrequests(self, s, apidata):
         try:
             # 从读取的表格中获取响应的参数作为传递
-            method = apiData["method"]
-            url = apiData["url"]
-            if apiData["params"] == "":
+            method = apidata["method"]
+            url = apidata["url"]
+            if apidata["params"] == "":
                 par = None
             else:
-                par = eval(apiData["params"])
-            if apiData["headers"] == "":
+                par = eval(apidata["params"])
+            if apidata["headers"] == "":
                 h = None
             else:
-                h = eval(apiData["headers"])
-            if apiData["body"] == "":
+                h = eval(apidata["headers"])
+            if apidata["body"] == "":
                 body_data = None
             else:
-                body_data = eval(apiData["body"])
-            type = apiData["type"]
+                body_data = eval(apidata["body"])
+            type = apidata["type"]
             v = False
             if type == "data":
                 body = body_data
             elif type == "json":
-                body = json.dumps(body_data)
+                body = json.dumps(body_data,ensure_ascii=False)
             else:
                 body = body_data
 
@@ -151,12 +150,12 @@ class SendRequests():
             print(e)
 
     # 自定义表单post方法
-    def postRequests(self,s, urls, jsonData, sign):
+    def postrequests(self,s, urls, jsondata, sign):
 
         # 发送表单请求并获取响应内容
         # re = json.loads((s.post(url=urls, data={'key': json.dumps(jsonData, ensure_ascii=False), 'sign': sign},
         #             headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})).text)
-        response =(s.post(url=urls, data={'key': json.dumps(jsonData, ensure_ascii=False), 'sign': sign},
+        response =(s.post(url=urls, data={'key': json.dumps(jsondata, ensure_ascii=False), 'sign': sign},
                                 headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})).text
 
         return response

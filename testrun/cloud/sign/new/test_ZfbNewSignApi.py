@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 import unittest,requests,json,re
-from commonzt import condata as c
-from commonzt import publicdef as p
-from commonzt import sendrequests as s
+from comzt import condata as c
+from comzt import publicdef as p
+from comzt import sendrequests as s
 
 class ZfbNewSign(unittest.TestCase):
 
@@ -17,11 +17,11 @@ class ZfbNewSign(unittest.TestCase):
 
         #生成验签反查密钥
 
-        sign=p.publicdef().setMd5(c.zfb_signnjson)
+        sign=p.Publicdef().setmd5(c.zfb_signnjson)
         # print(sign)
 
         #发送验签请求
-        rpo=s.SendRequests().postRequests(self.s, c.SIGN_URL, c.zfb_signnjson, sign)
+        rpo=s.SendRequests().postrequests(self.s, c.SIGN_URL, c.zfb_signnjson, sign)
 
         #检索验签状态,返回list数据
         result=re.findall(r'.*\"isSignatory\":(.+?)',rpo,re.M|re.I)

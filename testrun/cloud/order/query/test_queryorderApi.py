@@ -6,9 +6,9 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest, requests, ddt
 from config import setting
-from common.readexcel import ReadExcel
-from common.sendrequests import SendRequests
-from common.writeexcel import WriteExcel
+from comzt.readexcel import ReadExcel
+from comzt.sendrequests import SendRequests
+from comzt.writeexcel import WriteExcel
 
 testData = ReadExcel(setting.SOURCE_FILE, "queryorder").read_data()
 

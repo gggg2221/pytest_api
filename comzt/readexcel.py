@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
-__author__ = 'YinJia'
+__author__ = 'zt'
 
 import xlrd
 
 class ReadExcel():
     """读取excel文件数据"""
-    def __init__(self,fileName, SheetName="Sheet1"):
+    def __init__(self,_fileName,_SheetName="signnew"):
         self.data = xlrd.open_workbook(fileName)
         self.table = self.data.sheet_by_name(SheetName)
 

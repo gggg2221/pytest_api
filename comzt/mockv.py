@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 @app.route('/apitest/', methods=['POST', 'GET'])
 def hello_world():
-    p1 = "13111222222"
     p2 = "18566653995"
     res = {
         "resultCode": "0",
