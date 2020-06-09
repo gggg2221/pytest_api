@@ -1,3 +1,4 @@
 [
-  "test_ZfbNewSignApi.py::ZfbNewSign::test_ZfbnIsv"
+  "test_NewSignApi.py::NewSign::test_Wxnisv_1",
+  "test_NewSignApi.py::NewSign::test_Wxnisv_2"
 ]

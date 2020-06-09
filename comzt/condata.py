@@ -36,7 +36,7 @@ ZFBCARNO="鲁-PPPPP1"
 CARCOLOR="{\"plateColor\":\"BLUE\"}"
 
 # 获取当前时间
-iotime = p.publicdef().Dat()
+iotime = p.Publicdef.getdate()
 
 # 捷顺验签反查数据
 js_signjson ={"serviceId": "fc.park.signatoryResult.OrderQuery", "data": {"parkCode": "20181213001", "dataItems": [

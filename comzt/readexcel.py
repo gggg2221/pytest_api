@@ -6,9 +6,9 @@ import xlrd
 
 class ReadExcel():
     """读取excel文件数据"""
-    def __init__(self,_fileName,_SheetName="signnew"):
-        self.data = xlrd.open_workbook(fileName)
-        self.table = self.data.sheet_by_name(SheetName)
+    def __init__(self,_fileName,_SheetName="queryorder"):
+        self.data = xlrd.open_workbook(_fileName)
+        self.table = self.data.sheet_by_name(_SheetName)
 
         # 获取总行数、总列数
         self.nrows = self.table.nrows

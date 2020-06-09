@@ -3,6 +3,7 @@
 
 import os, sys, json
 import requests
+
 # from common import Session
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -116,7 +117,7 @@ class SendRequests():
         return response_dicts
 
     # 通用请求
-    def sendrequests(self, s, apidata):
+    def SendRequests(self, s, apidata):
         try:
             # 从读取的表格中获取响应的参数作为传递
             method = apidata["method"]
@@ -149,8 +150,8 @@ class SendRequests():
         except Exception as e:
             print(e)
 
-    # 自定义表单post方法
-    def postrequests(self,s, urls, jsondata, sign):
+    # 自定义表单post方法--验签反查
+    def PostRequests(self,s, urls, jsondata, sign):
 
         # 发送表单请求并获取响应内容
         # re = json.loads((s.post(url=urls, data={'key': json.dumps(jsonData, ensure_ascii=False), 'sign': sign},
