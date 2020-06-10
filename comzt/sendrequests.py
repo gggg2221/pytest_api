@@ -156,6 +156,7 @@ class SendRequests():
         # 发送表单请求并获取响应内容
         # re = json.loads((s.post(url=urls, data={'key': json.dumps(jsonData, ensure_ascii=False), 'sign': sign},
         #             headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})).text)
+        #获取返回值
         response =(s.post(url=urls, data={'key': json.dumps(jsondata, ensure_ascii=False), 'sign': sign},
                                 headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})).text
 

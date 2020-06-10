@@ -1,5 +1,5 @@
 # !/usr/bin/env python
-
+from __future__ import print_function
 import time, hashlib,json
 import random as r
 from comzt import condata as c
@@ -29,12 +29,29 @@ class Publicdef:
     #验签反查MD5加密
     @staticmethod
     def setmd5(jsons):
-        # js_signjson = {"serviceId": "fc.park.signatoryResult.OrderQuery","data": {"parkCode": "20181213001", "dataItems": [{"carNo": "藏-JK1111", "inTime": "2019-7-16 10:07:08","vehicleInfo": "{\"plateColor\":\"BLUE\"}"}]}}
         # 字典类型dict转json并去掉内部中文转码
         j=json.dumps(jsons, ensure_ascii=False)
         sign = j+ c.parksig
-        # print(sign)
-        b = bytes('{}'.format(sign),'utf-8')
-        m2 = hashlib.md5(b)
-        # print(m2.hexdigest())
-        return m2.hexdigest()
+        m = hashlib.md5()
+        b = sign.encode(encoding='utf-8')
+        m.update(b)
+        return m.hexdigest()
+
+
+    #替换json中的value
+    def print_keyvalue_all(input_json):
+
+        if isinstance(input_json, dict):
+            for key in input_json.keys():
+                key_value = input_json.get(key)
+                if isinstance(key_value, dict):
+                    print_keyvalue_all(key_value)
+                elif isinstance(key_value, list):
+                    for json_array in key_value:
+                        print_keyvalue_all(json_array)
+                else:
+                    print(str(key) + " = " + str(key_value))
+        elif isinstance(input_json, list):
+            for input_json_array in input_json:
+                print_keyvalue_all(input_json_array)
+

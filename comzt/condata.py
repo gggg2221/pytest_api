@@ -21,7 +21,7 @@ OldSIGN_URL = HTTP + OldSIGNIP + "/jscsp-signatory/signatory.servlet"
 redisIP = "10.10.203.12"
 
 # 车场密钥
-parksig = "7c44531ec05af74c1bd8df3975e8011e"
+parksig = "e0c8223b7ca64fa5bf4c0e2f97fd8811"
 
 # sign
 SigTopic = "dc.sign.park.in"
