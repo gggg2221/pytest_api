@@ -26,10 +26,10 @@ def run_case(all_case,result_path=setting.TEST_REPORT):
     now = time.strftime("%Y-%m-%d %H_%M_%S")
     filename = result_path + '/' + now + 'result.html'
     fp = open(filename,'wb')
-    runner = HTMLTestRunner(stream=fp,title='云平台接口自动化测试报告',description=None,tester='zt')
+    runner = HTMLTestRunner(stream=fp,title='云平台接口自动化测试报告',description='后台服务',tester='zt')
     runner.run(all_case)
     fp.close()
-    # report = new_report(setting.TEST_REPORT) #调用模块生成最新的报告
+    report = new_report(setting.TEST_REPORT) #调用模块生成最新的报告
     # send_mail(report) #调用发送邮件模块
 
 if __name__ =="__main__":

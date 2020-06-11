@@ -5,7 +5,7 @@ import random as r
 from comzt import condata as c
 
 
-class Publicdef:
+class Publicdef():
 
     #获取当前时间
     @staticmethod
@@ -36,22 +36,3 @@ class Publicdef:
         b = sign.encode(encoding='utf-8')
         m.update(b)
         return m.hexdigest()
-
-
-    #替换json中的value
-    def print_keyvalue_all(input_json):
-
-        if isinstance(input_json, dict):
-            for key in input_json.keys():
-                key_value = input_json.get(key)
-                if isinstance(key_value, dict):
-                    print_keyvalue_all(key_value)
-                elif isinstance(key_value, list):
-                    for json_array in key_value:
-                        print_keyvalue_all(json_array)
-                else:
-                    print(str(key) + " = " + str(key_value))
-        elif isinstance(input_json, list):
-            for input_json_array in input_json:
-                print_keyvalue_all(input_json_array)
-

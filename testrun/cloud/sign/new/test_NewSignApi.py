@@ -22,12 +22,13 @@ class NewSign(unittest.TestCase):
         pass
 
     @ddt.data(*testData)
-    def test_Wxnisv(self,data):
+    def test_Signnisv(self,data):
         # 获取ID字段数值，截取结尾数字并去掉开头0
         rowNum = int(data['ID'].split("_")[1])
         #获取请求数据,转为json
         sign_data=data['body']
         sign_json=json.loads(sign_data)
+        sign_json['data']['dataItems'][0]['inTime'] =c.iotime
 
         #生成验签反查密钥
         from comzt import publicdef as p
@@ -36,14 +37,13 @@ class NewSign(unittest.TestCase):
         #发送验签请求
         rpo=r().PostRequests(self.s, c.SIGN_URL, sign_json, sign)
         #检索验签状态,返回list数据
-        # self.result=rpo.findall(r'.*\"isSignatory\":(.+?)',rpo,re.M|re.I)
-        #取出验签状态结果进行校验
-        # self.assertTrue(int(result[0])== 1, "验签成功")
-        self.result = rpo
+        isSignatory=re.findall(r'.*\"isSignatory\":(.+?)',rpo,re.M|re.I)
+        # 取出验签状态结果进行校验
+        signresult=int(isSignatory[0])
+
         # 获取excel表格数据的状态码和消息
         readData_code = int(data["status_code"])
-        readData_msg = data["msg"]
-        if readData_code == self.result['resultCode'] and readData_msg == self.result['message']:
+        if readData_code == signresult:
             OK_data = "PASS"
             print("用例测试结果: {0}---->{1}".format(data['ID'], OK_data))
             WriteExcel(setting.TARGET_FILE).write_data(rowNum + 1, OK_data)
@@ -51,7 +51,7 @@ class NewSign(unittest.TestCase):
             NOT_data = "FAIL"
             print("用例测试结果: {0}---->{1}", format(data['ID'], NOT_data))
             WriteExcel(setting.TARGET_FILE).write_data(rowNum + 1, NOT_data)
-        self.assertEqual(self.result['resultCode'], readData_code, "返回实际结果是->:%s" % self.result['resultCode'])
+        self.assertEqual(signresult, readData_code, "返回实际结果是->:%s" % signresult)
 
 
 

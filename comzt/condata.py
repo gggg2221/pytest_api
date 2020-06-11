@@ -31,7 +31,6 @@ DkTopic = "dc.dk.park.out"
 
 JSCARNO="藏-JK1111"
 
-ZFBCARNO="鲁-PPPPP1"
 
 CARCOLOR="{\"plateColor\":\"BLUE\"}"
 
@@ -54,7 +53,3 @@ js_outjson = {"isReal": 0, "parkName": "梅test1", "ysMoney": 0.01, "overTimeYSM
               "outTime": "" + iotime + "", "vehicleInfo": CARCOLOR}
 #老验签
 zfb_signojson={"total":1,"business_no":"20181213002","dataItems":[{"attributes":{"carno":ZFBCARNO}}],"park_code":"20181213001"}
-
-#新验签
-zfb_signnjson={"serviceId":"fc.park.signatoryResult.OrderQuery","data":{"parkCode":"20181213001","dataItems":[
-    {"carNo":ZFBCARNO,"inTime":""+iotime+"","vehicleInfo":CARCOLOR}]}}
