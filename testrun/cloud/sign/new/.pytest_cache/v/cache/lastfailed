@@ -1,6 +1,0 @@
-{
-  "test_NewSignApi.py::NewSign::test_Signnisv_2": true,
-  "test_NewSignApi.py::NewSign::test_Wxnisv_2": true,
-  "test_ZfbApi.py::NewSign::test_WxIsv": true,
-  "test_ZfbApi.py::NewSign::test_ZfbIsv": true
-}

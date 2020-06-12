@@ -16,3 +16,4 @@ TEST_REPORT = os.path.join(BASE_DIR,"report")
 # 测试用例程序文件
 TEST_CASE = os.path.join(BASE_DIR,"testrun")
 
+print(TEST_CASE)

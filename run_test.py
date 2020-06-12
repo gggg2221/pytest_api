@@ -29,8 +29,10 @@ def run_case(all_case,result_path=setting.TEST_REPORT):
     runner = HTMLTestRunner(stream=fp,title='云平台接口自动化测试报告',description='后台服务',tester='zt')
     runner.run(all_case)
     fp.close()
-    report = new_report(setting.TEST_REPORT) #调用模块生成最新的报告
-    # send_mail(report) #调用发送邮件模块
+    # 调用模块生成最新的报告
+    # report = new_report(setting.TEST_REPORT)
+    # 调用发送邮件模块
+    # send_mail(report)
 
 if __name__ =="__main__":
     cases = add_case()

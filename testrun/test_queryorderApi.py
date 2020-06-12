@@ -11,7 +11,6 @@ from comzt.sendrequests import SendRequests as r
 #获取测试数据
 testData = ReadExcel(setting.SOURCE_FILE, "queryorder").read_data()
 
-
 @ddt.ddt
 class QueryOrder(unittest.TestCase):
     """订单查询"""
