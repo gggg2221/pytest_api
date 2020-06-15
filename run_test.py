@@ -2,6 +2,9 @@
 # _*_ coding:utf-8 _*_
 
 import os,sys
+
+from testrun.sign.test_newsignApi import NewSign
+
 sys.path.append(os.path.dirname(__file__))
 from config import setting
 import unittest,time
@@ -30,10 +33,11 @@ def run_case(all_case,result_path=setting.TEST_REPORT):
     runner.run(all_case)
     fp.close()
     # 调用模块生成最新的报告
-    # report = new_report(setting.TEST_REPORT)
+    report = new_report(setting.TEST_REPORT)
     # 调用发送邮件模块
     # send_mail(report)
 
 if __name__ =="__main__":
-    cases = add_case()
-    run_case(cases)
+
+    case=add_case()
+    run_case(case)

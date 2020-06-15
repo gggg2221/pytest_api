@@ -27,10 +27,10 @@ parksig = "e0c8223b7ca64fa5bf4c0e2f97fd8811"
 SigTopic = "dc.sign.park.in"
 
 # dktopic
-DkTopic = "dc.dk.park.out"
+DkTopic = "dc.order.park.out"
 
 JSCARNO="藏-JK1111"
-
+ZFBCARNO="藏-WW1111"
 
 CARCOLOR="{\"plateColor\":\"BLUE\"}"
 

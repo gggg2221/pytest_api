@@ -9,7 +9,7 @@ from comzt.writeexcel import WriteExcel
 from comzt.sendrequests import SendRequests as r
 
 #获取测试数据
-testData = ReadExcel(setting.SOURCE_FILE, "queryorder").read_data()
+testData = ReadExcel(setting.SOURCE_FILE, "cloudorder").read_data()
 
 @ddt.ddt
 class QueryOrder(unittest.TestCase):
@@ -39,11 +39,11 @@ class QueryOrder(unittest.TestCase):
         readData_msg = data["msg"]
         if readData_code == self.result['resultCode'] and readData_msg == self.result['message']:
             OK_data = "PASS"
-            print("用例测试结果: {0}---->{1}".format(data['ID'], OK_data))
+            print("测试结果: {0}---->{1}".format(data['ID'], OK_data))
             WriteExcel(setting.TARGET_FILE).write_data(rowNum + 1, OK_data)
         else:
             NOT_data = "FAIL"
-            print("用例测试结果: {0}---->{1}", format(data['ID'], NOT_data))
+            print("测试结果: {0}---->{1}", format(data['ID'], NOT_data))
             WriteExcel(setting.TARGET_FILE).write_data(rowNum + 1, NOT_data)
         self.assertEqual(self.result['resultCode'], readData_code, "返回实际结果是->:%s" % self.result['resultCode'])
 

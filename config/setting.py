@@ -10,10 +10,10 @@ TEST_CONFIG =  os.path.join(BASE_DIR,"config","dbconfig.ini")
 # 测试用例模板文件
 SOURCE_FILE = os.path.join(BASE_DIR,"testcase","CloudAPITestCase.xlsx")
 # excel测试用例结果文件
-TARGET_FILE = os.path.join(BASE_DIR,"report","excelReport","CloudAPITestCase.xlsx")
+TARGET_FILE = os.path.join(BASE_DIR,"report","excelReport","CloudAPITestCaseResult.xlsx")
 # 测试用例报告
 TEST_REPORT = os.path.join(BASE_DIR,"report")
 # 测试用例程序文件
 TEST_CASE = os.path.join(BASE_DIR,"testrun")
 
-print(TEST_CASE)
+# print(TEST_CASE)
