@@ -3,6 +3,7 @@
 
 import os, sys, json
 import requests
+from comzt import condata as c
 
 # from common import Session
 
@@ -117,7 +118,7 @@ class SendRequests():
         return response_dicts
 
     # 通用请求
-    def SendRequests(self, s, apidata):
+    def sendRequests(self, s, apidata):
         try:
             # 从读取的表格中获取响应的参数作为传递
             method = apidata["method"]
@@ -151,13 +152,19 @@ class SendRequests():
             print(e)
 
     # 自定义表单post方法--验签反查
-    def PostRequests(self,s, urls, jsondata, sign):
+    def postRequests(self,s, apidata):
+        #取出数据
+        method = apidata["method"]
+        urls= apidata["url"]
+        sign_data = apidata['body']
+        sign_json = json.loads(sign_data)
+        sign_json['data']['dataItems'][0]['inTime'] = c.iotime
+        # 生成验签反查密钥
+        from comzt import publicdef as p
+        sign = p.Publicdef.setmd5(sign_json)
 
         # 发送表单请求并获取响应内容
-        # re = json.loads((s.post(url=urls, data={'key': json.dumps(jsonData, ensure_ascii=False), 'sign': sign},
-        #             headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})).text)
-        #获取返回值
-        response =(s.post(url=urls, data={'key': json.dumps(jsondata, ensure_ascii=False), 'sign': sign},
-                                headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})).text
+        re =s.request(method=method,url=urls,data={'key': json.dumps(sign_json, ensure_ascii=False), 'sign': sign},
+                                headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
 
-        return response
+        return re
