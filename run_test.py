@@ -21,7 +21,11 @@ from package.HTMLTestRunner import HTMLTestRunner
 
 @allure.step('执行所有用例')
 def runcase():
-    pytest.main(['-v'])
+    #--allure - epics
+    #--allure-features
+    #--allure - stories
+    #--allure_severities=critical, blocker'
+    pytest.main(['-v','--allure-epics=订单服务,验签服务'])
 
 # def run_case(all_case,result_path=setting.TEST_REPORT):
     """执行所有的测试用例"""

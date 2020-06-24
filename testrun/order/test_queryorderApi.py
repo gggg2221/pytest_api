@@ -16,6 +16,8 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 testData = ReadExcel(setting.SOURCE_FILE, "cloudorder").read_data()
 # test_data = get_csv_data(testData)
 
+@allure.epic('订单服务')
+@allure.feature("订单查询")
 class TestQueryOrder(object):
     """订单查询"""
 
@@ -27,8 +29,8 @@ class TestQueryOrder(object):
     def teardown(self):
         pass
 
-    @allure.feature("订单用例")
-    @allure.story("订单查询")
+
+    @allure.story("订单查询场景")
     @pytest.mark.parametrize('data',testData)
     def test_Queryorder(self, data):
         # 获取ID字段数值，截取结尾数字并去掉开头0

@@ -12,7 +12,8 @@ import pytest
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 testData = ReadExcel(setting.SOURCE_FILE, "signnew").read_data()
 
-
+@allure.epic('验签服务')
+@allure.feature("验签")
 class TestNewSign(object):
     """新验签"""
 
@@ -24,7 +25,6 @@ class TestNewSign(object):
     def tearDown(self):
         pass
 
-    @allure.feature("验签")
     @allure.story("渠道验签")
     @pytest.mark.parametrize('data',testData)
     def test_Signnisv(self,data):
