@@ -6,7 +6,7 @@ import xlrd
 
 class ReadExcel():
     """读取excel文件数据"""
-    def __init__(self,_fileName,_SheetName="queryorder"):
+    def __init__(self,_fileName,_SheetName=""):
         self.data = xlrd.open_workbook(_fileName)
         self.table = self.data.sheet_by_name(_SheetName)
 

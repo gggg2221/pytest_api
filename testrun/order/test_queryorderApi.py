@@ -1,28 +1,36 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-import unittest, requests, ddt,os, sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+import unittest, requests,os, sys
 from config import setting
 from comzt.readexcel import ReadExcel
 from comzt.writeexcel import WriteExcel
 from comzt.sendrequests import SendRequests as r
+# from util.read_yaml import get_yaml_data
+# from pyutil.get_csvdata import get_csv_data
+import allure
+import pytest
 
 #获取测试数据
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 testData = ReadExcel(setting.SOURCE_FILE, "cloudorder").read_data()
+# test_data = get_csv_data(testData)
 
-@ddt.ddt
-class QueryOrder(unittest.TestCase):
+class TestQueryOrder(object):
     """订单查询"""
 
-    def setUp(self):
+    @classmethod
+    def setup(self):
         self.s = requests.session()
 
-    def tearDown(self):
+    @classmethod
+    def teardown(self):
         pass
 
-    @ddt.data(*testData)
-    def test_queryorder(self, data):
+    @allure.feature("订单用例")
+    @allure.story("订单查询")
+    @pytest.mark.parametrize('data',testData)
+    def test_Queryorder(self, data):
         # 获取ID字段数值，截取结尾数字并去掉开头0
         rowNum = int(data['ID'].split("_")[1])
         print("******* 正在执行用例 ->{0} *********".format(data['ID']))
@@ -40,13 +48,14 @@ class QueryOrder(unittest.TestCase):
         if readData_code == self.result['resultCode'] and readData_msg == self.result['message']:
             OK_data = "PASS"
             print("测试结果: {0}---->{1}".format(data['ID'], OK_data))
-            WriteExcel(setting.TARGET_FILE).write_data(rowNum + 1, OK_data)
+            WriteExcel(setting.TARGET_FILE['orderresult']).write_data(rowNum + 1, OK_data)
         else:
             NOT_data = "FAIL"
             print("测试结果: {0}---->{1}", format(data['ID'], NOT_data))
-            WriteExcel(setting.TARGET_FILE).write_data(rowNum + 1, NOT_data)
-        self.assertEqual(self.result['resultCode'], readData_code, "返回实际结果是->:%s" % self.result['resultCode'])
+            WriteExcel(setting.TARGET_FILE['orderresult']).write_data(rowNum + 1, NOT_data)
+        # self.assertEqual(self.result['resultCode'], readData_code, "返回实际结果是->:%s" % self.result['resultCode'])
+        assert self.result['resultCode']==readData_code, "返回实际结果是->:%s" % self.result['resultCode']
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main(['-s','test_queryorderApi.py'])

@@ -8,9 +8,18 @@ sys.path.append(BASE_DIR)
 # 配置文件
 TEST_CONFIG =  os.path.join(BASE_DIR,"config","dbconfig.ini")
 # 测试用例模板文件
-SOURCE_FILE = os.path.join(BASE_DIR,"testcase","CloudAPITestCase.xlsx")
+# SIGN_FILE=os.path.join(BASE_DIR,"testcase","signTestCase.xlsx")
+# ORDER_FILE=os.path.join(BASE_DIR,"testcase","orderTestCase.xlsx")
+# SOURCE_FILE={'signcase':SIGN_FILE,'ordercase':ORDER_FILE}
+SOURCE_FILE=os.path.join(BASE_DIR,"testcase","CloudApiTestCase.xlsx")
+
+
 # excel测试用例结果文件
-TARGET_FILE = os.path.join(BASE_DIR,"report","excelReport","CloudAPITestCaseResult.xlsx")
+SIGN_RESULT = os.path.join(BASE_DIR,"report","excelReport","signTestCaseResult.xlsx")
+ORDER_RESULT = os.path.join(BASE_DIR,"report","excelReport","orderTestCaseResult.xlsx")
+TARGET_FILE = {'signresult':SIGN_RESULT,'orderresult':ORDER_RESULT}
+
+# TARGET_FILE = os.path.join(BASE_DIR,"report","excelReport","signTestCaseResult.xlsx")
 # 测试用例报告
 TEST_REPORT = os.path.join(BASE_DIR,"report")
 # 测试用例程序文件

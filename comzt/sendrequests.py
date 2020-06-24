@@ -152,7 +152,7 @@ class SendRequests():
             print(e)
 
     # 自定义表单post方法--验签反查
-    def postRequests(self,s, apidata):
+    def postRequests(self, apidata):
         #取出数据
         method = apidata["method"]
         urls= apidata["url"]
@@ -164,7 +164,7 @@ class SendRequests():
         sign = p.Publicdef.setmd5(sign_json)
 
         # 发送表单请求并获取响应内容
-        re =s.request(method=method,url=urls,data={'key': json.dumps(sign_json, ensure_ascii=False), 'sign': sign},
+        re =requests.request(method=method,url=urls,data={'key': json.dumps(sign_json, ensure_ascii=False), 'sign': sign},
                                 headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
 
         return re

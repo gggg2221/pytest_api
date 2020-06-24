@@ -1,0 +1,5 @@
+module,ID,UseCase,url,method,params,headers,body,type,status_code,msg,result, testers
+订单查询,订单反查_001,订单反查,http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher,post,,{"Content-Type": "application/json"},"{""serviceId"":""fc.park.pay.query"",""attributes"":{""parkCode"":""20181213001"",""orderNo"":""DK120051816130410560140697817477""}}",json,0,成功,,
+订单查询,查询订单详情_002,查询订单详情,http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher,post,,{"Content-Type": "application/json"},"{""serviceId"":""JSCSP_ORDER_DETAILINFO"",""attributes"":{""parkCode"":""20181213001"",""orderNo"":""DKEBAD98D12B8B43DCBB873ADAEA4D8B""}}",json,0,成功,,
+订单查询,订单主表查询_003,订单主表查询,http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher,post,,{"Content-Type": "application/json"},"{""serviceId"":""JSCSP_ORDER_MAINQUERY"",""attributes"":{""transactionId"":"""",""orderNo"":""CFTC1190322182156188859335640254""
+},""dataItems"":[]}",json,0,成功,,

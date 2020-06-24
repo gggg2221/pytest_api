@@ -1,0 +1,22 @@
+---
+tests:
+- case: 订单反查
+  http:
+    method: POST
+    path: http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher
+    headers:
+      Content-Type:
+          application/json
+    body:
+      serviceId:
+          fc.park.pay.query,
+        attributes:
+            parkCode:
+                20181213001
+            orderNo:
+                DK120051816130410560140697817477
+  expected:
+    response:
+      title: 正在上映的电影-上海
+      count: 10
+      start: 0
