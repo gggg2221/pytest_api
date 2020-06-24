@@ -1,0 +1,285 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Administrator",
+    "children" : [ {
+      "name" : "14924-MainThread",
+      "children" : [ {
+        "name" : "test_Signnisv[data1]",
+        "uid" : "dde7d0afdaeb9db6",
+        "parentUid" : "d74479fbecca02e55c317e7285757410",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991051974,
+          "stop" : 1592991053513,
+          "duration" : 1539
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '支付宝验签_002', 'UseCase': '支付宝验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-ZFB999\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data2]",
+        "uid" : "8318454de3ac8016",
+        "parentUid" : "d74479fbecca02e55c317e7285757410",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991049875,
+          "stop" : 1592991049967,
+          "duration" : 92
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单主表查询_003', 'UseCase': '订单主表查询', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_MAINQUERY\",\"attributes\":{\"transactionId\":\"\",\"orderNo\":\"CFTC1190322182156188859335640254\"\\n},\"dataItems\":[]}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data1]",
+        "uid" : "ff1deb839151001c",
+        "parentUid" : "d74479fbecca02e55c317e7285757410",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991049172,
+          "stop" : 1592991049869,
+          "duration" : 697
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '查询订单详情_002', 'UseCase': '查询订单详情', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_DETAILINFO\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DKEBAD98D12B8B43DCBB873ADAEA4D8B\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Signnisv[data0]",
+        "uid" : "45336d8b3bdc921f",
+        "parentUid" : "d74479fbecca02e55c317e7285757410",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991049974,
+          "stop" : 1592991051965,
+          "duration" : 1991
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '微信验签_001', 'UseCase': '微信验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-CS1111\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data0]",
+        "uid" : "1ada9d7b999d1a87",
+        "parentUid" : "d74479fbecca02e55c317e7285757410",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991047955,
+          "stop" : 1592991049112,
+          "duration" : 1157
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单反查_001', 'UseCase': '订单反查', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.pay.query\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DK120051816130410560140697817477\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      } ],
+      "uid" : "d74479fbecca02e55c317e7285757410"
+    }, {
+      "name" : "13308-MainThread",
+      "children" : [ {
+        "name" : "test_Signnisv[data0]",
+        "uid" : "2374a3c1d39e978f",
+        "parentUid" : "62201dd986be59fab257e06798b7cca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990798435,
+          "stop" : 1592990799828,
+          "duration" : 1393
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '微信验签_001', 'UseCase': '微信验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-CS1111\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data1]",
+        "uid" : "28bea06f73c2955b",
+        "parentUid" : "62201dd986be59fab257e06798b7cca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990798128,
+          "stop" : 1592990798329,
+          "duration" : 201
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '查询订单详情_002', 'UseCase': '查询订单详情', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_DETAILINFO\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DKEBAD98D12B8B43DCBB873ADAEA4D8B\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Signnisv[data1]",
+        "uid" : "7a0cfc52751ae5ca",
+        "parentUid" : "62201dd986be59fab257e06798b7cca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990799837,
+          "stop" : 1592990800909,
+          "duration" : 1072
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '支付宝验签_002', 'UseCase': '支付宝验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-ZFB999\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data2]",
+        "uid" : "61e54ebd85e6964f",
+        "parentUid" : "62201dd986be59fab257e06798b7cca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990798353,
+          "stop" : 1592990798429,
+          "duration" : 76
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单主表查询_003', 'UseCase': '订单主表查询', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_MAINQUERY\",\"attributes\":{\"transactionId\":\"\",\"orderNo\":\"CFTC1190322182156188859335640254\"\\n},\"dataItems\":[]}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data0]",
+        "uid" : "ab6e54f35324be71",
+        "parentUid" : "62201dd986be59fab257e06798b7cca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990797973,
+          "stop" : 1592990798121,
+          "duration" : 148
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单反查_001', 'UseCase': '订单反查', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.pay.query\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DK120051816130410560140697817477\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      } ],
+      "uid" : "62201dd986be59fab257e06798b7cca0"
+    }, {
+      "name" : "6608-MainThread",
+      "children" : [ {
+        "name" : "test_Signnisv[data0]",
+        "uid" : "122a3dc1c20c570d",
+        "parentUid" : "905ac12ff39244900693a3b461f2c56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990145860,
+          "stop" : 1592990153743,
+          "duration" : 7883
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '微信验签_001', 'UseCase': '微信验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-CS1111\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data1]",
+        "uid" : "b45b10cd3f4d3679",
+        "parentUid" : "905ac12ff39244900693a3b461f2c56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990145611,
+          "stop" : 1592990145754,
+          "duration" : 143
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '查询订单详情_002', 'UseCase': '查询订单详情', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_DETAILINFO\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DKEBAD98D12B8B43DCBB873ADAEA4D8B\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Signnisv[data1]",
+        "uid" : "99237c11adb684b5",
+        "parentUid" : "905ac12ff39244900693a3b461f2c56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990153762,
+          "stop" : 1592990155214,
+          "duration" : 1452
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '支付宝验签_002', 'UseCase': '支付宝验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-ZFB999\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data0]",
+        "uid" : "bafc6241a14a123a",
+        "parentUid" : "905ac12ff39244900693a3b461f2c56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990145464,
+          "stop" : 1592990145604,
+          "duration" : 140
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单反查_001', 'UseCase': '订单反查', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.pay.query\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DK120051816130410560140697817477\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data2]",
+        "uid" : "dae7321fc70decf0",
+        "parentUid" : "905ac12ff39244900693a3b461f2c56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592990145771,
+          "stop" : 1592990145852,
+          "duration" : 81
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单主表查询_003', 'UseCase': '订单主表查询', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_MAINQUERY\",\"attributes\":{\"transactionId\":\"\",\"orderNo\":\"CFTC1190322182156188859335640254\"\\n},\"dataItems\":[]}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      } ],
+      "uid" : "905ac12ff39244900693a3b461f2c56c"
+    }, {
+      "name" : "14936-MainThread",
+      "children" : [ {
+        "name" : "test_Signnisv[data1]",
+        "uid" : "dcf0caffbf885344",
+        "parentUid" : "4e0a635b7752a183c9bcdabeaf225d42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991358553,
+          "stop" : 1592991359884,
+          "duration" : 1331
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '支付宝验签_002', 'UseCase': '支付宝验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-ZFB999\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data2]",
+        "uid" : "2951ed53f8eb406f",
+        "parentUid" : "4e0a635b7752a183c9bcdabeaf225d42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991357284,
+          "stop" : 1592991357362,
+          "duration" : 78
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单主表查询_003', 'UseCase': '订单主表查询', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_MAINQUERY\",\"attributes\":{\"transactionId\":\"\",\"orderNo\":\"CFTC1190322182156188859335640254\"\\n},\"dataItems\":[]}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data1]",
+        "uid" : "deec9b645146e8af",
+        "parentUid" : "4e0a635b7752a183c9bcdabeaf225d42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991357065,
+          "stop" : 1592991357256,
+          "duration" : 191
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '查询订单详情_002', 'UseCase': '查询订单详情', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_DETAILINFO\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DKEBAD98D12B8B43DCBB873ADAEA4D8B\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Signnisv[data0]",
+        "uid" : "680ba3c256637a56",
+        "parentUid" : "4e0a635b7752a183c9bcdabeaf225d42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991357370,
+          "stop" : 1592991358546,
+          "duration" : 1176
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '验签', 'ID': '微信验签_001', 'UseCase': '微信验签', 'url': 'http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.signatoryResult.OrderQuery\",\"data\":{\"parkCode\":\"20181213001\",\"dataItems\":[{\"carNo\":\"藏-CS1111\",\"inTime\":\"2019-4-15 09:45:46\",\"vehicleInfo\":\"{\\\\\"plateColor\\\\\":\\\\\"BLUE\\\\\"}\"}]}}', 'type': 'json', 'status_code': '1', 'msg': '', 'result': '', ' testers': ''}" ]
+      }, {
+        "name" : "test_Queryorder[data0]",
+        "uid" : "43ff62b747ac4f7e",
+        "parentUid" : "4e0a635b7752a183c9bcdabeaf225d42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592991356921,
+          "stop" : 1592991357056,
+          "duration" : 135
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'module': '订单查询', 'ID': '订单反查_001', 'UseCase': '订单反查', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"fc.park.pay.query\",\"attributes\":{\"parkCode\":\"20181213001\",\"orderNo\":\"DK120051816130410560140697817477\"}}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+      } ],
+      "uid" : "4e0a635b7752a183c9bcdabeaf225d42"
+    } ],
+    "uid" : "328eb9efeb9c618be4b1559f42467298"
+  } ]
+}

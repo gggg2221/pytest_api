@@ -31,6 +31,7 @@ class TestQueryOrder(object):
 
 
     @allure.story("订单查询场景")
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data',testData)
     def test_Queryorder(self, data):
         # 获取ID字段数值，截取结尾数字并去掉开头0

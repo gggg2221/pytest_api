@@ -1,0 +1,85 @@
+{
+  "uid" : "2807e89d2c9f9a42",
+  "name" : "test_Queryorder[data2]",
+  "fullName" : "testrun.order.test_queryorderApi.TestQueryOrder#test_Queryorder",
+  "historyId" : "81c745ebc1c257dde244850ad29fbe64",
+  "time" : {
+    "start" : 1592990798353,
+    "stop" : 1592990798429,
+    "duration" : 76
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8313748584e1996c",
+      "name" : "stdout",
+      "source" : "8313748584e1996c.txt",
+      "type" : "text/plain",
+      "size" : 1261
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "订单服务"
+  }, {
+    "name" : "story",
+    "value" : "订单查询场景"
+  }, {
+    "name" : "feature",
+    "value" : "订单查询"
+  }, {
+    "name" : "tag",
+    "value" : "flaky(reruns=3)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testrun.order"
+  }, {
+    "name" : "suite",
+    "value" : "test_queryorderApi"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQueryOrder"
+  }, {
+    "name" : "host",
+    "value" : "Administrator"
+  }, {
+    "name" : "thread",
+    "value" : "13308-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testrun.order.test_queryorderApi"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'module': '订单查询', 'ID': '订单主表查询_003', 'UseCase': '订单主表查询', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_MAINQUERY\",\"attributes\":{\"transactionId\":\"\",\"orderNo\":\"CFTC1190322182156188859335640254\"\\n},\"dataItems\":[]}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "flaky(reruns=3)" ]
+  },
+  "source" : "2807e89d2c9f9a42.json",
+  "parameterValues" : [ "{'module': '订单查询', 'ID': '订单主表查询_003', 'UseCase': '订单主表查询', 'url': 'http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher', 'method': 'post', 'params': '', 'headers': '{\"Content-Type\": \"application/json\"}', 'body': '{\"serviceId\":\"JSCSP_ORDER_MAINQUERY\",\"attributes\":{\"transactionId\":\"\",\"orderNo\":\"CFTC1190322182156188859335640254\"\\n},\"dataItems\":[]}', 'type': 'json', 'status_code': '0', 'msg': '成功', 'result': '', ' testers': ''}" ]
+}

@@ -1,0 +1,6 @@
+******* 正在执行用例 ->支付宝验签_002 *********
+请求方式: post，请求URL: http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory
+请求参数: 
+post请求body类型为：json ,body内容为：{"serviceId":"fc.park.signatoryResult.OrderQuery","data":{"parkCode":"20181213001","dataItems":[{"carNo":"藏-ZFB999","inTime":"2019-4-15 09:45:46","vehicleInfo":"{\"plateColor\":\"BLUE\"}"}]}}
+页面返回信息：{"result":"0","dataItems":[{"inTime":"2020-06-24 17:30:47","itemId":"1f859668c9544deeb04eeede287a8430","signatoryCode":1000,"carNo":"藏-ZFB999","isSignatory":1,"withholdLimit":"20.00","withholdChannel":"ZFB_ISV","isEnabledEtc":1,"vehicleInfo":"{\"plateColor\":\"BLUE\"}","withholdMode":0,"userId":"df7a1aada49649baa24a508df49a0998","playSoundMsg":"支付宝ISV"}],"time":"2020-06-24 17:31:03"}
+测试结果: 支付宝验签_002---->PASS

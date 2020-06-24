@@ -13,6 +13,7 @@ class ReadExcel():
         # 获取总行数、总列数
         self.nrows = self.table.nrows
         self.ncols = self.table.ncols
+
     def read_data(self):
         if self.nrows > 1:
             # 获取第一行的内容，列表格式

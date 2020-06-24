@@ -25,7 +25,17 @@ def runcase():
     #--allure-features
     #--allure - stories
     #--allure_severities=critical, blocker'
-    pytest.main(['-v','--allure-epics=订单服务,验签服务'])
+    #–workers(optional) *：多进程运行需要加此参数，  *是进程数。默认为1。
+    #–-tests-per-worker(optional) *：多线程运行， *是每个worker运行的最大并发线程数。默认为1
+
+    pytest.main(['-v','--allure-epics=订单服务,验签服务','--alluredir','report/result'])
+    #生成html测试报告
+    os.system("F:/allure-2.13.4/bin/allure.bat "
+              "generate "
+              "F:/workspace/cloudapi_autotest/report/result "
+              "-o "
+              "F:/workspace/cloudapi_autotest/report/html")
+
 
 # def run_case(all_case,result_path=setting.TEST_REPORT):
     """执行所有的测试用例"""
