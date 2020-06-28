@@ -21,14 +21,14 @@ from package.HTMLTestRunner import HTMLTestRunner
 
 @allure.step('执行所有用例')
 def runcase():
-    #--allure - epics
+    #--allure-epics
     #--allure-features
-    #--allure - stories
+    #--allure-stories
     #--allure_severities=critical, blocker'
     #–workers(optional) *：多进程运行需要加此参数，  *是进程数。默认为1。
     #–-tests-per-worker(optional) *：多线程运行， *是每个worker运行的最大并发线程数。默认为1
 
-    pytest.main(['-v','--allure-epics=订单服务,验签服务','--alluredir','report/result'])
+    pytest.main(['-v','--allure-epics=订单服务,验签服务','--alluredir','report/result','--clean-alluredir'])
     #生成html测试报告
     os.system("F:/allure-2.13.4/bin/allure.bat "
               "generate "

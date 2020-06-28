@@ -17,12 +17,10 @@ testData = ReadExcel(setting.SOURCE_FILE, "signnew").read_data()
 class TestNewSign(object):
     """新验签"""
 
-    @classmethod
-    def setUp(self):
+    def setup(self):
         self.s = requests.session()
 
-    @classmethod
-    def tearDown(self):
+    def teardown(self):
         pass
 
     @allure.story("渠道验签")

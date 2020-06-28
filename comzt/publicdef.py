@@ -3,7 +3,8 @@ from __future__ import print_function
 import time, hashlib,json
 import random as r
 from comzt import condata as c
-
+import random
+import string
 
 class Publicdef():
 
@@ -19,12 +20,17 @@ class Publicdef():
     #随机订单id
     @staticmethod
     def radid():
-        # base = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-        #         'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
         base='1234567890abcdefghijklmnopqrstuvwxyz'
         numb = "".join(r.sample(base,32))
-        # print(numb)
         return numb
+
+    #随机产生orderid
+    @staticmethod
+    def randomoid():
+        # 指定随机数长度
+        r_num = 32
+        orderid = ''.join(random.sample(string.digits + string.ascii_letters,r_num))
+        return orderid
 
     #验签反查MD5加密
     @staticmethod
@@ -36,3 +42,6 @@ class Publicdef():
         b = sign.encode(encoding='utf-8')
         m.update(b)
         return m.hexdigest()
+
+# if __name__ == '__main__':
+#     p=Publicdef()
