@@ -22,19 +22,16 @@ class TestDkOrder(object):
     @allure.story('微信代扣')
     def test_wxisv(self):
         sign=p.Publicdef.setmd5(c.js_signjson)
-        # print(sign)
         #发送入场验签数据
-        r().postRequests(self.s,c.SIGN_URL,c.js_signjson,sign)
+        r().postsign(self.s,c.SIGN_URL,c.js_signjson,sign)
         creattime = p.Publicdef.getdate()
         carno =c.WXCARNO
         # 等待验签完成
         time.sleep(2)
-
-        k.kafkatools.send_out(c.DkTopic,c.js_outjson)
+        k.Kafkatools().send_out(c.DkTopic,c.wxoutjson)
         time.sleep(5)
-        sql = f'select ORDER_NO from cp_order_main where CAR_NO="{carno}" and ORDER_STATUS=0 and CREATE_TIME>="{creattime}" LIMIT 1'
+        sql = f'select ORDER_NO from cs_biz_order where CAR_NO="{carno}" and STATUS=0 and CREATE_TIME>="{creattime}" LIMIT 1'
         order=m.DB().select(sql)
-        # print(order)
         assert order!=""
 
 

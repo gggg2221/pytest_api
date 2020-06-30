@@ -34,6 +34,7 @@ class DB:
         except OperationalError as e:
             print("Mysql Error %d: %s" % (e.args[0],e.args[1]))
 
+
    # 清除表数据
     def clear(self,table_name):
         real_sql = "delete from " + table_name + ";"
@@ -58,12 +59,10 @@ class DB:
 
     #查询数据
     def select(self,sql):
-
-        mycursor = self.cursor()
-
-        mycursor.execute(sql)
-
-        myresult = mycursor.fetchone()
+        cursor = self.conn.cursor()
+        # mycursor = self.cursor()
+        cursor.execute(sql)
+        myresult = cursor.fetchone()
 
         return myresult
 

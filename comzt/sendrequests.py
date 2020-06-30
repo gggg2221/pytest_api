@@ -168,3 +168,12 @@ class SendRequests():
                                 headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
 
         return re
+
+        # 验签post方法--验签反查
+    def postsign(self,s,url,signjson,sign):
+
+        # 发送表单请求并获取响应内容
+        re = requests.request(method='post', url=url,
+                              data={'key': json.dumps(signjson, ensure_ascii=False), 'sign': sign},
+                              headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+        return re
