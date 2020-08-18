@@ -1,11 +1,11 @@
 # !/usr/bin/env python
 from __future__ import print_function
 import time, hashlib,json
-import random as r
+import random
 import string
 import pytest_api.comzt.readconfig as r
 
-read=r.readconfig().conf()
+read=r.readconfig().read_config()
 parksig=read['cloud']['parksig']
 
 
@@ -24,7 +24,7 @@ class Publicdef():
     @staticmethod
     def radid():
         base='1234567890abcdefghijklmnopqrstuvwxyz'
-        numb = "".join(r.sample(base,32))
+        numb = "".join(random.sample(base,32))
         return numb
 
     #随机产生orderid
@@ -32,7 +32,7 @@ class Publicdef():
     def randomoid():
         # 指定随机数长度
         r_num = 32
-        orderid = ''.join(r.sample(string.digits + string.ascii_letters,r_num))
+        orderid = ''.join(random.sample(string.digits + string.ascii_letters,r_num))
         return orderid
 
     #验签反查MD5加密

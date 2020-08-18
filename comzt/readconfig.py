@@ -1,18 +1,21 @@
 # !/usr/bin/env python
-import os,yaml
+import yaml,os
 
 class readconfig:
 
-    def conf(self):
+    def read_config(self):
         # 获取当前文件路径
         root_path = os.path.dirname(__file__)
         # 获取项目根目录
         filepath = os.path.abspath('..')
-        # 获取yaml配置文件路径
-        yamlPath = os.path.join(filepath, 'application.yaml')
-        # 打开配置文件
-        f = open(yamlPath, 'r', encoding='utf-8')
-        # 创建读取对象
-        cont = f.read()
-        x = yaml.load(cont)
-        return x;
+        configpath=os.path.join(filepath,'application.yml')
+        # print(configpath)
+        #从根目录开始找配置文件并打开
+        with open(configpath, 'r', encoding="utf-8") as f:
+            # load方法转出为字典类型
+            x = yaml.load(f.read(),Loader=yaml.FullLoader)
+            return x
+
+if __name__ == '__main__':
+    r1=readconfig()
+    r1.read_config()

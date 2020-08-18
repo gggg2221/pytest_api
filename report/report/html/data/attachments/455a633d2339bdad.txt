@@ -1,6 +1,0 @@
-******* 正在执行用例 ->微信验签_001 *********
-请求方式: post，请求URL: http://10.10.203.33:8185/jscsp-signatory/serviceRequest/signatory
-请求参数: 
-post请求body类型为：json ,body内容为：{"serviceId":"fc.park.signatoryResult.OrderQuery","data":{"parkCode":"20181213001","dataItems":[{"carNo":"藏-CS1111","inTime":"2019-4-15 09:45:46","vehicleInfo":"{\"plateColor\":\"BLUE\"}"}]}}
-页面返回信息：{"result":"0","dataItems":[{"inTime":"2020-06-24 17:26:37","itemId":"ac7b903e99a64265a71845eb5fe2d61a","signatoryCode":1000,"carNo":"藏-CS1111","isSignatory":1,"withholdLimit":"20.00","withholdChannel":"WX_ISV","isEnabledEtc":1,"vehicleInfo":"{\"plateColor\":\"BLUE\"}","withholdMode":0,"userId":"9d111b09741f49e69ebaaae7961b2d1a","playSoundMsg":"微信车主平台"}],"time":"2020-06-24 17:26:49"}
-测试结果: 微信验签_001---->PASS

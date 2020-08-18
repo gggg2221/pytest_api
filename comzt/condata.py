@@ -3,7 +3,7 @@ import pytest_api.comzt.publicdef as p
 import pytest_api.comzt.readconfig as r
 
 
-read=r.readconfig().conf()
+read=r.readconfig().read_config()
 ORDERIP=read['cloud']['orderip']
 NEWSIGNIP=read['cloud']['newsignip']
 OldSIGNIP=read['cloud']['oldsignip']

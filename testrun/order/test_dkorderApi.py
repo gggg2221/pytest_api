@@ -9,7 +9,7 @@ from pytest_api.comzt import readconfig as r
 from pytest_api.db_fixture import mysql_db as m
 import allure
 
-read=r.readconfig().conf()
+read=r.readconfig().read_config()
 DkTopic=read['cloud']['dktopic']
 
 @allure.epic('订单服务')

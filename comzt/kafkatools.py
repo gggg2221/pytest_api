@@ -1,11 +1,14 @@
 # !/usr/bin/env python
 
-import json
-
+import json,time
+from pytest_api.comzt import readconfig as rc
 from kafka import KafkaProducer
 from kafka.errors import kafka_errors
 
-producer = KafkaProducer(bootstrap_servers='10.10.203.201:9092,10.10.203.202:9092,10.10.203.203:9092',
+read=rc.readconfig().read_config()
+kafkaip=read['cloud']['kafkaip']
+
+producer = KafkaProducer(bootstrap_servers=kafkaip,
                          value_serializer=lambda v: json.dumps(v,ensure_ascii=False).encode('utf-8'))
 
 # topic=['dc.order.park.out','dc.sign.park.in']
@@ -22,3 +25,15 @@ class Kafkatools():
         finally:
             producer.close()
 
+
+
+if __name__ == '__main__':
+
+    for num in range(1,11):
+        orderNo = "meitest3d38481743ed9c2b"
+        order = orderNo + str(num)
+        orderPayId = "meitest3d38481743ed9c2c"
+        payid = orderPayId + str(num)
+        jsonsync = "{\"cousumerThreadName\":\"\",\"failTime\":\"\",\"from\":\"\",\"orderMainDTO\":null,\"seqId\":\"\",\"serviceId\":\"\",\"syncKafkaDTO\":{\"businesserCode\":\"20181213002\",\"orderCouponId\":\"\",\"orderNo\":\"" + order + "\",\"orderPayId\":\"" + payid + "\",\"partitionKey\":\"1\",\"refundNo\":\"\"}}"
+        producer.send('jscsp.dd4Sjtb.sync',jsonsync)
+        time.sleep(0.001)

@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Jun 24 17:35:57 CST 2020","Wed Jun 24 17:35:57 CST 2020","78","testrun.order","test_queryorderApi","TestQueryOrder","","","test_Queryorder[data2]",""
-"passed","Wed Jun 24 17:35:57 CST 2020","Wed Jun 24 17:35:58 CST 2020","1176","testrun.sign","test_newsignApi","TestNewSign","","","test_Signnisv[data0]",""
-"passed","Wed Jun 24 17:35:56 CST 2020","Wed Jun 24 17:35:57 CST 2020","135","testrun.order","test_queryorderApi","TestQueryOrder","","","test_Queryorder[data0]",""
-"passed","Wed Jun 24 17:35:57 CST 2020","Wed Jun 24 17:35:57 CST 2020","191","testrun.order","test_queryorderApi","TestQueryOrder","","","test_Queryorder[data1]",""
-"passed","Wed Jun 24 17:35:58 CST 2020","Wed Jun 24 17:35:59 CST 2020","1331","testrun.sign","test_newsignApi","TestNewSign","","","test_Signnisv[data1]",""
