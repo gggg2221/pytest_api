@@ -1,35 +1,18 @@
 # !/usr/bin/env python
+import pytest_api.comzt.publicdef as p
+import pytest_api.comzt.readconfig as r
 
-from comzt import publicdef as p
 
-# 请求服务url
-ORDERIP = "10.10.203.19:8081"
-
-NEWSIGNIP = "10.10.203.33:8185"
-
-OldSIGNIP = "10.10.203.33:8085"
+read=r.readconfig().conf()
+ORDERIP=read['cloud']['orderip']
+NEWSIGNIP=read['cloud']['newsignip']
+OldSIGNIP=read['cloud']['oldsignip']
+PARKCODE=read['cloud']['parkcode']
 
 HTTP="http://"
-
 ORDER_URL = HTTP + ORDERIP + "/order-api-dispatcher/order/dispatcher"
-
 SIGN_URL = HTTP + NEWSIGNIP + "/jscsp-signatory/serviceRequest/signatory"
-
 OldSIGN_URL = HTTP + OldSIGNIP + "/jscsp-signatory/signatory.servlet"
-
-# 云订单redisIp
-redisIP = "10.10.203.12"
-
-#   车场code 20181213001 2019120311
-PARKCODE="20181213001"
-# 车场密钥
-parksig = "e0c8223b7ca64fa5bf4c0e2f97fd8811"
-
-# sign
-SigTopic = "dc.sign.park.in"
-
-# dktopic
-DkTopic = "dc.order.park.out"
 
 JSCARNO="藏-JK1111"
 ZFBCARNO="藏-ZFB999"
@@ -46,8 +29,6 @@ iotime = p.Publicdef.getdate()
 # 捷顺验签反查数据
 js_signjson ={"serviceId": "fc.park.signatoryResult.OrderQuery", "data": {"parkCode": "20181213001", "dataItems": [
     {"carNo": JSCARNO, "inTime": "" + iotime + "", "vehicleInfo": CARCOLOR}]}}
-
-
 
 # 捷顺出场代扣数据
 js_outjson = {"isReal": 0, "parkName": "梅test1", "ysMoney": 0.01, "overTimeYSMoney": 0, "overTimeHGMoney": 0,

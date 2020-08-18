@@ -2,9 +2,12 @@
 from __future__ import print_function
 import time, hashlib,json
 import random as r
-from comzt import condata as c
-import random
 import string
+import pytest_api.comzt.readconfig as r
+
+read=r.readconfig().conf()
+parksig=read['cloud']['parksig']
+
 
 class Publicdef():
 
@@ -29,7 +32,7 @@ class Publicdef():
     def randomoid():
         # 指定随机数长度
         r_num = 32
-        orderid = ''.join(random.sample(string.digits + string.ascii_letters,r_num))
+        orderid = ''.join(r.sample(string.digits + string.ascii_letters,r_num))
         return orderid
 
     #验签反查MD5加密
@@ -37,7 +40,7 @@ class Publicdef():
     def setmd5(jsons):
         # 字典类型dict转json并去掉内部中文转码
         j=json.dumps(jsons, ensure_ascii=False)
-        sign = j+ c.parksig
+        sign = j+parksig
         m = hashlib.md5()
         b = sign.encode(encoding='utf-8')
         m.update(b)

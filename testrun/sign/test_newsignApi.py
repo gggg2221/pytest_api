@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-import unittest,requests,os,sys
-from config import setting
-from comzt.readexcel import ReadExcel
-from comzt.writeexcel import WriteExcel
-from comzt.sendrequests import SendRequests as r
+import requests,os,sys
+from pytest_api.config import setting
+from pytest_api.comzt.readexcel import ReadExcel
+from pytest_api.comzt.writeexcel import WriteExcel
+from pytest_api.comzt.sendrequests import SendRequests as r
 import allure
 import pytest
 

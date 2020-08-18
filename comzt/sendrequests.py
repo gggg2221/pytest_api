@@ -3,9 +3,8 @@
 
 import os, sys, json
 import requests
-from comzt import condata as c
-
-# from common import Session
+from pytest_api.comzt import condata as c
+from pytest_api.comzt import publicdef as p
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
@@ -160,7 +159,6 @@ class SendRequests():
         sign_json = json.loads(sign_data)
         sign_json['data']['dataItems'][0]['inTime'] = c.iotime
         # 生成验签反查密钥
-        from comzt import publicdef as p
         sign = p.Publicdef.setmd5(sign_json)
 
         # 发送表单请求并获取响应内容
