@@ -4,10 +4,13 @@
 import os, sys, json
 import requests
 from pytest_api.comzt import condata as c
+from pytest_api.comzt import readconfig as read
 from pytest_api.comzt import publicdef as p
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
+read=read.readconfig().read_config()
+orderurl=read['cloud']['orderurl']
 
 class SendRequests():
 
@@ -121,7 +124,7 @@ class SendRequests():
         try:
             # 从读取的表格中获取响应的参数作为传递
             method = apidata["method"]
-            url = apidata["url"]
+            # url = apidata["url"]
             if apidata["params"] == "":
                 par = None
             else:
@@ -144,7 +147,7 @@ class SendRequests():
                 body = body_data
 
             # 发送请求
-            re = s.request(method=method, url=url, headers=h, params=par, data=body, verify=v)
+            re = s.request(method=method, url=orderurl, headers=h, params=par, data=body, verify=v)
 
             return re
         except Exception as e:

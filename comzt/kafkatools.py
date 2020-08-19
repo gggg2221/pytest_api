@@ -1,6 +1,8 @@
 # !/usr/bin/env python
 
 import json,time
+
+
 from pytest_api.comzt import readconfig as rc
 from kafka import KafkaProducer
 from kafka.errors import kafka_errors
@@ -29,11 +31,23 @@ class Kafkatools():
 
 if __name__ == '__main__':
 
-    for num in range(1,11):
-        orderNo = "meitest3d38481743ed9c2b"
-        order = orderNo + str(num)
-        orderPayId = "meitest3d38481743ed9c2c"
-        payid = orderPayId + str(num)
-        jsonsync = "{\"cousumerThreadName\":\"\",\"failTime\":\"\",\"from\":\"\",\"orderMainDTO\":null,\"seqId\":\"\",\"serviceId\":\"\",\"syncKafkaDTO\":{\"businesserCode\":\"20181213002\",\"orderCouponId\":\"\",\"orderNo\":\"" + order + "\",\"orderPayId\":\"" + payid + "\",\"partitionKey\":\"1\",\"refundNo\":\"\"}}"
-        producer.send('jscsp.dd4Sjtb.sync',jsonsync)
-        time.sleep(0.001)
+    # for num in range(1,10001):
+    #     orderNo = "meitest3d38481743ed9c2b"
+    #     order = orderNo + str(num)
+    #     orderPayId = "meitest3d38481743ed9c2c"
+    #     payid = orderPayId + str(num)
+    #     jsonsync = "{\"cousumerThreadName\":\"\",\"failTime\":\"\",\"from\":\"\",\"orderMainDTO\":null,\"seqId\":\"\",\"serviceId\":\"\",\"syncKafkaDTO\":{\"businesserCode\":\"20181213002\",\"orderCouponId\":\"\",\"orderNo\":\"" + order + "\",\"orderPayId\":\"" + payid + "\",\"partitionKey\":\"1\",\"refundNo\":\"\"}}"
+    #     producer.send('jscsp.dd4Sjtb.sync',jsonsync)
+    #     time.sleep(0.001)
+
+    a='ssdfdgdfgkjkljsalkd7878skj222'
+    b=list(a)
+    c=[]
+    print(''.join(set(a)))
+
+    for i in range(len(a)):
+        if a[i] not in c:
+            c.append(a[i])
+    print(''.join(c))
+
+

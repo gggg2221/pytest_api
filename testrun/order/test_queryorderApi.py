@@ -10,7 +10,7 @@ import allure
 import pytest
 
 #获取测试数据
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+# sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 testData = ReadExcel(setting.SOURCE_FILE, "cloudorder").read_data()
 # test_data = get_csv_data(testData)
 
@@ -29,7 +29,7 @@ class TestQueryOrder(object):
 
 
     @allure.story("订单查询场景")
-    @pytest.mark.flaky(reruns=3)
+    # @pytest.mark.flaky(reruns=3,reruns_delay=3)
     @pytest.mark.parametrize('data',testData)
     def test_Queryorder(self, data):
         # 获取ID字段数值，截取结尾数字并去掉开头0
