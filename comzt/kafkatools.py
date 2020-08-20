@@ -22,6 +22,7 @@ class Kafkatools():
     def send_out(self,topic,json_data):
         try:
             producer.send(topic,json_data)
+            time.sleep(0.001)
         except kafka_errors as e:
             print(e)
         finally:
@@ -31,23 +32,13 @@ class Kafkatools():
 
 if __name__ == '__main__':
 
-    # for num in range(1,10001):
-    #     orderNo = "meitest3d38481743ed9c2b"
-    #     order = orderNo + str(num)
-    #     orderPayId = "meitest3d38481743ed9c2c"
-    #     payid = orderPayId + str(num)
-    #     jsonsync = "{\"cousumerThreadName\":\"\",\"failTime\":\"\",\"from\":\"\",\"orderMainDTO\":null,\"seqId\":\"\",\"serviceId\":\"\",\"syncKafkaDTO\":{\"businesserCode\":\"20181213002\",\"orderCouponId\":\"\",\"orderNo\":\"" + order + "\",\"orderPayId\":\"" + payid + "\",\"partitionKey\":\"1\",\"refundNo\":\"\"}}"
-    #     producer.send('jscsp.dd4Sjtb.sync',jsonsync)
-    #     time.sleep(0.001)
-
-    a='ssdfdgdfgkjkljsalkd7878skj222'
-    b=list(a)
-    c=[]
-    print(''.join(set(a)))
-
-    for i in range(len(a)):
-        if a[i] not in c:
-            c.append(a[i])
-    print(''.join(c))
-
+    for num in range(1,2):
+        orderNo = "meitest3d38481743ed9c2b"
+        order = orderNo + str(num)
+        orderPayId = "meitest3d38481743ed9c2c"
+        payid = orderPayId + str(num)
+        jsonsync = "{\"cousumerThreadName\":\"\",\"failTime\":\"\",\"from\":\"\",\"orderMainDTO\":null,\"seqId\":\"\",\"serviceId\":\"\",\"syncKafkaDTO\":{\"businesserCode\":\"20181213002\",\"orderCouponId\":\"\",\"orderNo\":\"" + order + "\",\"orderPayId\":\"" + payid + "\",\"partitionKey\":\"1\",\"refundNo\":\"\"}}"
+        # producer.send('jscsp.dd4Sjtb.sync',jsonsync)
+        producer.send('dc.dk.park.out',jsonsync)
+        time.sleep(0.001)
 

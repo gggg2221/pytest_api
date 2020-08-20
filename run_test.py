@@ -24,10 +24,10 @@ def runcase():
     #--allure-stories
     #--allure_severities=critical, blocker'
     #–workers(optional) *：多进程运行需要加此参数，  *是进程数。默认为1。
-    #"--reruns=1","--reruns-delay=2","-m", "fail",失败重跑一次，在每次开跑前会等待2s
-    #–-tests-per-worker(optional) *：多线程运行， *是每个worker运行的最大并发线程数。默认为1
+    #'--reruns=1','--reruns-delay=2','-m', 'fail',失败重跑一次，在每次开跑前会等待2s
+    #--tests-per-worker(optional) *：多线程运行， *是每个worker运行的最大并发线程数。默认为1
 
-    pytest.main(['-v','--reruns=1','--allure-features=订单查询','--alluredir','report/result','--clean-alluredir'])
+    pytest.main(['-v','--allure-features=订单查询','--reruns=1','--reruns-delay=2','--alluredir','report/allure'])
     #生成html测试报告
     os.system("F:/allure-2.13.4/bin/allure.bat "
               "generate "

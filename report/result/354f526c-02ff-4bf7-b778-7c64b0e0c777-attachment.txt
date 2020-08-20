@@ -1,5 +1,0 @@
-******* 正在执行用例 ->查询订单详情_002 *********
-请求方式: post，请求URL: http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher
-请求参数: 
-post请求body类型为：json ,body内容为：{"serviceId":"JSCSP_ORDER_DETAILINFO","attributes":{"parkCode":"20181213001","orderNo":"DKEBAD98D12B8B43DCBB873ADAEA4D8B"}}
-Failed to parse: 10:10:203:19:8081

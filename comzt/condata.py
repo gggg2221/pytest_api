@@ -30,6 +30,14 @@ iotime = p.Publicdef.getdate()
 js_signjson ={"serviceId": "fc.park.signatoryResult.OrderQuery", "data": {"parkCode": "20181213001", "dataItems": [
     {"carNo": JSCARNO, "inTime": "" + iotime + "", "vehicleInfo": CARCOLOR}]}}
 
+# wx验签反查数据
+wx_signjson ={"serviceId": "fc.park.signatoryResult.OrderQuery", "data": {"parkCode": "20181213001", "dataItems": [
+    {"carNo": WXCARNO, "inTime": "" + iotime + "", "vehicleInfo": CARCOLOR}]}}
+
+# zfb验签反查数据
+zfb_signjson ={"serviceId": "fc.park.signatoryResult.OrderQuery", "data": {"parkCode": "20181213001", "dataItems": [
+    {"carNo": ZFBCARNO, "inTime": "" + iotime + "", "vehicleInfo": CARCOLOR}]}}
+
 # 捷顺出场代扣数据
 js_outjson = {"isReal": 0, "parkName": "梅test1", "ysMoney": 0.01, "overTimeYSMoney": 0, "overTimeHGMoney": 0,
               "yhMoney": 0.01, "inEquipName": "入口_230", "outMode": "HIGHFEE", "outOperator": "用户管理员",

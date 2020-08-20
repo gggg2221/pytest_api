@@ -7,7 +7,7 @@ cloud:
   redisip: 10.10.203.12  #云订单redisIp
   sigtopic: dc.sign.park.in  #延签topic
   dktopic: dc.order.park.out  #dktopic
-  #kafkaip: 10.10.203.201:9092,10.10.203.202:9092,10.10.203.203:9092 #10.10.204.185:9092,10.10.204.186:9092,10.10.204.42:9092
-  kafkaip: 10.10.204.185:9092,10.10.204.186:9092,10.10.204.42:9092
-  orderurl: http://10:10:203:19:8081/order-api-dispatcher/order/dispatcher
+  kafkaip: 10.10.203.201:9092,10.10.203.202:9092,10.10.203.203:9092 #10.10.204.185:9092,10.10.204.186:9092,10.10.204.42:9092
+  #kafkaip: 10.10.204.185:9092,10.10.204.186:9092,10.10.204.42:9092
+  orderurl: http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher
 
