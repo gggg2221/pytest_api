@@ -3,7 +3,7 @@ from __future__ import print_function
 import time, hashlib,json
 import random
 import string
-import pytest_api.comzt.readconfig as r
+import comzt.readconfig as r
 
 read=r.readconfig().read_config()
 parksig=read['cloud']['parksig']

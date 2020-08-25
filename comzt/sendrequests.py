@@ -3,9 +3,9 @@
 
 import os, sys, json
 import requests
-from pytest_api.comzt import condata as c
-from pytest_api.comzt import readconfig as read
-from pytest_api.comzt import publicdef as p
+from comzt import condata as c
+from comzt import readconfig as read
+from comzt import publicdef as p
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 

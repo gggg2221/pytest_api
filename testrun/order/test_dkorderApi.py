@@ -1,18 +1,17 @@
 #!/usr/bin/env python
 
 import pytest,requests,time
-from pytest_api.comzt import kafkatools as k
-from pytest_api.comzt import condata as c
-from pytest_api.comzt.sendrequests import SendRequests as r
-from pytest_api.comzt import publicdef as p
-from pytest_api.comzt import readconfig as read
-from pytest_api.db_fixture import mysql_db as m
+from comzt import kafkatools as k
+from comzt import condata as c
+from comzt.sendrequests import SendRequests as r
+from comzt import publicdef as p
+from comzt import readconfig as read
+from db_fixture import mysql_db as m
 import allure
 
 read=read.readconfig().read_config()
 DkTopic=read['cloud']['dktopic']
 
-@allure.epic('订单服务')
 @allure.feature('代扣订单')
 class TestDkOrder(object):
 
@@ -36,7 +35,7 @@ class TestDkOrder(object):
         time.sleep(3)
         sql = f'select ORDER_NO from cs_biz_order where CAR_NO="{carno}" and STATUS=0 and CREATE_TIME>="{creattime}" LIMIT 1'
         order=m.DB().select(sql)
-        assert order!=""
+        assert order!=''
 
 
 if __name__ == '__main__':

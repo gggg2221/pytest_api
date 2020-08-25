@@ -3,7 +3,7 @@
 import json,time
 
 
-from pytest_api.comzt import readconfig as rc
+from comzt import readconfig as rc
 from kafka import KafkaProducer
 from kafka.errors import kafka_errors
 

@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-import requests,os, sys
-from pytest_api.config import setting
-from pytest_api.comzt.readexcel import ReadExcel
-from pytest_api.comzt.writeexcel import WriteExcel
-from pytest_api.comzt.sendrequests import SendRequests as r
+import requests
+from config import setting
+from comzt.readexcel import ReadExcel
+from comzt.writeexcel import WriteExcel
+from comzt.sendrequests import SendRequests as r
 import allure
 import pytest
 
@@ -14,7 +14,6 @@ import pytest
 testData = ReadExcel(setting.SOURCE_FILE, "cloudorder").read_data()
 # test_data = get_csv_data(testData)
 
-@allure.epic('订单服务')
 @allure.feature("订单查询")
 class TestQueryOrder(object):
     """订单查询"""

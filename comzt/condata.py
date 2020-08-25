@@ -1,6 +1,6 @@
 # !/usr/bin/env python
-import pytest_api.comzt.publicdef as p
-import pytest_api.comzt.readconfig as r
+import comzt.publicdef as p
+import comzt.readconfig as r
 
 
 read=r.readconfig().read_config()

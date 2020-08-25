@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import requests,os,sys
-from pytest_api.config import setting
-from pytest_api.comzt.readexcel import ReadExcel
-from pytest_api.comzt.writeexcel import WriteExcel
-from pytest_api.comzt.sendrequests import SendRequests as r
+from config import setting
+from comzt.readexcel import ReadExcel
+from comzt.writeexcel import WriteExcel
+from comzt.sendrequests import SendRequests as r
 import allure
 import pytest
 
@@ -12,7 +12,7 @@ import pytest
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 testData = ReadExcel(setting.SOURCE_FILE, "signnew").read_data()
 
-@allure.epic('验签服务')
+
 @allure.feature("验签")
 class TestNewSign(object):
     """新验签"""
