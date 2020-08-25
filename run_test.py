@@ -6,10 +6,10 @@ import os,sys
 sys.path.append(os.path.dirname(__file__))
 import allure
 import pytest
-from pytest_api.comzt.sendmail import send_mail
-from pytest_api.comzt.newReport import new_report
-from pytest_api.db_fixture import test_data
-from pytest_api.package.HTMLTestRunner import HTMLTestRunner
+from comzt.sendmail import send_mail
+from comzt.newReport import new_report
+from db_fixture import test_data
+from package.HTMLTestRunner import HTMLTestRunner
 
 # def add_case(test_path=setting.TEST_CASE):
 #     """加载所有的测试用例"""
