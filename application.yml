@@ -2,7 +2,7 @@ cloud:
   orderip: 10.10.203.19:8081  #3.0订单服务ip
   newsignip: 10.10.203.33:8185  #新验签服务ip
   oldsignip: 10.10.203.33:8085  #老延签服务ip
-  parksig: e0c8223b7ca64fa5bf4c0e2f97fd8811  #车场密钥
+  parksig: a413a0614997409cba4e109320d41b5c  #车场密钥
   parkcode: 20181213001  #车场code 20181213001 2019120311
   redisip: 10.10.203.12  #云订单redisIp
   sigtopic: dc.sign.park.in  #延签topic

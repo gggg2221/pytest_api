@@ -1,0 +1,7 @@
+******* 正在执行用例 ->订单主表查询_003 *********
+请求方式: post，请求URL: http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher
+请求参数: 
+post请求body类型为：json ,body内容为：{"serviceId":"JSCSP_ORDER_MAINQUERY","attributes":{"transactionId":"","orderNo":"CFTC1190322182156188859335640254"
+},"dataItems":[]}
+页面返回信息：{"serviceId":"JSCSP_ORDER_MAINQUERY","seqId":"3ae7775fe4054514a7008528d833409d","resultCode":0,"message":"成功","dataItems":[],"attributes":{"createTime":"2019-03-22 18:21:56","projectCode":"1059960125","transactionId":"92e0b8a8e4ea46769e9c639c0085d239","businesserName":"世梁专用","businesserCode":"880075588888888","payTime":null,"channelBusinesserCode":null,"payFee":"20.00","userId":"8d81cbce3c4f4f89b250c1176d84dccf","thirdTransactionId":null,"appType":"SERVICE","parkCode":"1059960125","discountFee":null,"serviceFee":"20.00","parkId":"9247bf05954242f585b3e52cdf29d191","channelCode":null,"updateTime":null,"orderType":"CFTC","prepayTime":null,"orderStatus":-1,"carNo":"藏-ZJS369","orderNo":"CFTC1190322182156188859335640254","parkName":"汪旺停车场","payType":null,"payQwFee":"20.00","qwCouponFee":"0.00","couponSn":null}}
+测试结果: 订单主表查询_003---->PASS

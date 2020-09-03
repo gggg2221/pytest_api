@@ -1,0 +1,6 @@
+******* 正在执行用例 ->订单反查_001 *********
+请求方式: post，请求URL: http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher
+请求参数: 
+post请求body类型为：json ,body内容为：{"serviceId":"fc.park.pay.query","attributes":{"parkCode":"20181213001","orderNo":"DK120051816130410560140697817477"}}
+页面返回信息：{"serviceId":"fc.park.pay.query","seqId":"fad42e1ebfe646d88d76a9d0d61d38c7","resultCode":0,"message":"成功","dataItems":[],"attributes":{"tradeState":"SUCCESS","transactionId":"711993284125261824","orderNo":"DK120051816130410560140697817477","bankType":"捷顺金科","payType":"JSJK","payTime":"2020-05-18 17:27:07.0","payFrom":"jieshun"}}
+测试结果: 订单反查_001---->PASS

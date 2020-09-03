@@ -1,0 +1,6 @@
+******* 正在执行用例 ->查询订单详情_002 *********
+请求方式: post，请求URL: http://10.10.203.19:8081/order-api-dispatcher/order/dispatcher
+请求参数: 
+post请求body类型为：json ,body内容为：{"serviceId":"JSCSP_ORDER_DETAILINFO","attributes":{"parkCode":"20181213001","orderNo":"DKEBAD98D12B8B43DCBB873ADAEA4D8B"}}
+页面返回信息：{"serviceId":"JSCSP_ORDER_DETAILINFO","seqId":"666c9c8efdb94aafa7c08b0c0abae1f5","resultCode":0,"message":"成功","dataItems":[{"objectId":"","operateType":"READ","subItems":[],"failItems":[],"attributes":{"createTime":"2018-12-26 17:56:40","transactionId":"","businesserName":"世梁专用 ","businesserCode":"880075588888888","from":"","endTime":"2018-12-26 17:56:40","gcodeId":"","transportFee":"0.00","startTime":"2018-12-26 17:56:00","merGID":"藏-ZWX123","serviceTime":40,"userId":"","tradeMode":"","orderId":"083d28041ecf473e8903068ed12fde1a","goodName":"停车费用-藏-ZWX123-梅test","parkCode":"20181213001","billType":0,"serviceFee":"0.10","discountFee":"0.00","orderType":"DK","isRefund":1,"seqId":"-587vh31","orderStatus":"0","carNo":"藏-ZWX123","orderNo":"DKEBAD98D12B8B43DCBB873ADAEA4D8B","timeEnd":"","parkName":"梅test","totalFee":"0.10","serviceId":"JSCSP_ORDER_DETAILINFO","bankType":"","extInfo":"","payType":"WX"}}],"attributes":{}}
+测试结果: 查询订单详情_002---->PASS
