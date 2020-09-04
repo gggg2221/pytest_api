@@ -42,8 +42,8 @@ def runcase():
     #--tests-per-worker(optional) *：多线程运行， *是每个worker运行的最大并发线程数。默认为1
     #-x失败停止 -v详细 -q简略过程
 
-    # pytest.main(['-v','--allure-features=订单查询','--alluredir','report/allure'])
-    pytest.main(['-v'])
+    pytest.main(['-v','--allure-features=订单查询','--alluredir','report/allure'])
+    # pytest.main(['-v'])
     #生成html测试报告
     # os.system("F:/allure-2.13.4/bin/allure.bat "
     #           "generate "

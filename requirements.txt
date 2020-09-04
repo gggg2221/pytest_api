@@ -1,4 +1,4 @@
-pytest_allure_adaptor==1.7.10
+allure-pytest==2.8.18
 xlrd==1.1.0
 openpyxl==2.5.6
 requests==2.19.1
